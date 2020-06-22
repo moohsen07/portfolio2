@@ -230,6 +230,12 @@ figure img{
   transition: .5s;
   cursor: pointer;
 }
+@media(max-width:700px){
+  .header-main .navigation .nav-link{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+}
 .header-main .navigation .nav-link:hover{
   color: var(--main-color);
 }
@@ -273,6 +279,17 @@ header .title .typing{
   font-size: 33px;
   position: relative;
 }
+@media (max-width: 550px){
+  header .title h1{
+    font-size: 35px;
+  }
+  header .title p{
+    font-size: 18px;
+  }
+  header .title .typing{
+    font-size: 25px;
+  }
+}
 header .title .typing::before{
   content: '';
   position: absolute;
@@ -294,7 +311,7 @@ header .title .typing::before{
 header .social{
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 15px;
 }
 header .social i{
   color: #fff;
