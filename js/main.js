@@ -52,6 +52,8 @@ openBox.addEventListener("click", function () {
 
 let mobileBtn = document.querySelector(".mobile-btn")
 
+let pages = document.querySelectorAll(".page")
+
 mobileBtn.onclick = function () {
 
   this.classList.toggle("open")
@@ -64,8 +66,6 @@ mobileBtn.onclick = function () {
   else {
 
     this.parentElement.style.left = "-25%"
-
-    document.body.style.paddingLeft = "0"
 
   }
 
@@ -154,18 +154,13 @@ function pageTransition() {
 
     section.style.cssText = "transform: translateX(0); transition-delay:1s"
 
-    if (section == document.querySelector(".home")) {
+    if (mobileBtn.classList.contains("open")) {
 
-      document.body.style.overflow = "hidden"
+      mobileBtn.parentElement.style.left = "-25%"
 
-    }
-    else {
-
-      document.body.style.cssText = "overflow-y :auto;"
+      mobileBtn.classList.remove("open")
 
     }
-
-    if (mobileBtn.classList.contains("open")) mobileBtn.parentElement.style.left = "-25%"
 
 
   }))
